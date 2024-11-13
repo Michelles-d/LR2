@@ -1,0 +1,103 @@
+﻿<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Лр №2</title>
+    <link rel="stylesheet" href="StyleSheet1.css">
+    
+    <style>
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+}
+
+.highlight {
+    background-color: rgba(55, 138, 106, 0.521);
+    font-weight: bold;
+}
+
+#navbar a {
+    text-decoration: none;
+    padding: 5px 10px;
+    position: fixed; 
+    top: 10px; 
+    left: 10px; 
+    background-color: #353c5caf; 
+    color: white; 
+    padding: 5px;
+}
+    </style>
+</head>
+
+<body>
+    <div class="header" style="font-size: 30px">
+        <h1>Лабораторна робота №2</h1>
+        <h4>Каскадні таблиці стилів</h4>
+    </div>
+
+    <div class="container">
+        <div id="navbar">
+            <a href="#content" style="color: white;">Перейти до контенту</a>
+        </div>
+
+        <div id="sidebar">
+            <h2>Навігація</h2>
+            <ul>
+                <li><a href="#">Головна</a></li>
+                <li><a href="#">Про нас</a></li>
+                <li><a href="#">Контакти</a></li>
+            </ul>
+        </div>
+
+        <div id="content">
+            <h2>Способи використання каскадних таблиць стилів</h2>
+           
+            <ul><li>У цьому параграфі показано приклад рядкового елемента, з викорстанням inline-опису + стилізація з використанням властивсоті float</li>
+            <p><img src="images/ph2.jpg" style="float: left; margin-right: 10px; width: 150px;">Цей текст обтікає зображення зліва завдяки властивості float. Зображення займає ліву позицію, що дозволяє тексту обтікати його з правого боку.</p>
+            
+            <li style="clear: both">Використання селекторів тегів, класів та ідентифікаторів</li>
+            <p><span class="highlight">Цей текст підсвічено та виділено</span> за допомогою стилю, заданого через селектор <b>класу</b>. </p>
+            <p>За <b>тегом</b> було отформатовано все тіло сторінки, наприклад шрифт та міжрядковий інтервал, а також пункт списку:</p>
+            <div class="code-block">
+            <pre style="background-color: transparent"><code>
+                li{
+                    padding: 10px;
+                    font-weight: bold;
+                    color:rgba(18, 46, 16, 0.753)
+                }
+            </code></pre></div>
+           <p><b>Ідентифікатор</b> було використано щоб відформатувати кнопку "Перейти до контенту" у лівому верхньому куті. Саме ідентифікатор добре підходить, так як елемент такого типу один єдиний на сторінці</p>
+           
+           <li>Елемент з властивістю position</li>
+            <p>Вище вказаний елемент "Перейти до контенту" є зафіксованим за положенням, з вказівками цього самого положення. Було використано абсолютне позиціонування.</p>
+            <div class="code-block">
+                <pre style="background-color: transparent"><code>
+                    #navbar a {
+                        text-decoration: none;
+                        padding: 5px 10px;
+                        <b>position: fixed;
+                        top: 10px; 
+                        left: 10px; </b>
+                        background-color: #353c5caf; 
+                        color: white; 
+                        padding: 5px;
+                    }
+                </code></pre></div>
+        </ul>
+        </div>
+    </div>
+        <div class="block">
+            <div class="hidden-part">
+                <img src="images/ph1.jpg">
+                <a href="https://nure.ua/">https://nure.ua/</a>
+            </div>
+            <div class="visible-part">
+                Contacts
+            </div>
+        </div>
+    
+</body>
+</html>
